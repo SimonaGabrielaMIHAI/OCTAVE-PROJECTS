@@ -1,0 +1,25 @@
+//~~~~~~~~~~~~~~~~~~~~~~~~~~//
+//	MIHAI SIMONA-GABRIELA   //
+//~~~~~~~~~~~~~~~~~~~~~~~~~~//
+
+*Conversia dintr-o baza in alta*
+
+/Implementare/
+Pentru a evita erorile date de numerele mari obtinute la ridicarea la putere si
+adunarea lor efectuez operatii pe string-uri, folosind 2 functii, de inmultire si
+adunare. Ele primesc ca argumente 2 string-uri si rezolva operatiile facand conversia
+fiecarui element din string, in numar. Faptul ca lucrez cu string-uri in loc de 
+vectori mi-a permis sa las numerele in orice forma, sa le inversez, concatenand
+la sfarsit fiecare element din vector in pozitia dorita(fac conversia inapoi in string).
+In functia principala, daca sursa nu este in baza 10, o trec prin inmultirea puterilor
+bazei date cu fiecare element corespunzator si adunarea tuturor valorilor. Pentru
+trecerea in noua baza fac impartiri succesive. Nu am implementat impartirea unui vector
+la alt vector, am folosit impartirea unui vector la un scalar, chiar daca baza ar fi de
+2 cifre. Oricum impartirea se face: fiecare cifra din sursa impartita la noua baza.
+Se imparte pana cand sursa e 0, se salveaza resturile finale de la fiecare
+impartire. 
+Pentru litere am implementat 2 functii switch separate. Prima, MYSWITCH schimba 
+literele mici sau mari in cifre(sau cifrele tot in cifre), ca string. A doua,
+NEWSWITCH schimba numerele de 2 cifre in litere(sau cifrele in cifre), tot ca string.
+
+Conditii: Programul ruleaza cu baze cuprinse intre 2 si 30, inclusiv.
