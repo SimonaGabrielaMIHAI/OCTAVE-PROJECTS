@@ -1,0 +1,22 @@
+//~~~~~~~~~~~~~~~~~~~~~~~~~~//
+//	MIHAI SIMONA-GABRIELA   //
+//~~~~~~~~~~~~~~~~~~~~~~~~~~//
+
+*Jocul X si O*
+
+Se ruleaza folosind functia principala, JOC.
+Am evitat constrangerea jocului la o serie fixa de mutari, asa ca am folosit si
+mutari random. Mentionez ca exista o singura varianta in care jucatorul poate sa 
+castige impotriva programului, nu am eliminat-o pentru ca jocul era prea monoton :)
+Este pe cazul in care jucatorul joaca cu 0 si se datoreaza functiei random, jucatorul
+avand 2 mutari de castig si programul blocand una singura.
+
+/Implementare/
+1.Functia ACTUALIZEAZA imi pune valorile din vector la locul potrivit in matricea de joc
+ce trebuie afisata.
+2.Functia MUTARE_PC analizeaza cazurile si alege mutarea optima pentru situatia jocului.
+3.Functia VERIFICA_TABLA comunica starea jocului. Daca nu mai sunt mutari inseamna ca 
+runda s-a incheiat cu remiza, daca unul din jucatori a castigat se actualizeaza scorul.
+In functie de raspunsul functiei se decide parcursul jocului.
+4.Functia ALEGE_X_SAU_O "sterge tabla", ii cere jucatorului noul simbol si eventual 
+face prima mutare a pc-ului daca acesta trebuie sa mute primul.
