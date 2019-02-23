@@ -1,0 +1,19 @@
+//~~~~~~~~~~~~~~~~~~~~~~~~~~//
+//	MIHAI SIMONA-GABRIELA   //
+//~~~~~~~~~~~~~~~~~~~~~~~~~~//
+
+*Codul Morse*
+
+Are la baza un arbore binar.
+Fiecare litera a alfabetului este codificata printr-o secventa de puncte si linii.
+Un punct inseamna deplasarea pe ramura stanga a arborelui, iar o linie deplasarea
+la dreapta.
+
+
+/Implementare/
+Arborele codului Morse este memorat folosind Cell-Arrays.
+Cautarea din functia ENCODE se face in fiecare celula, pe fiecare drum posibil, ceea
+ce implica o serie de verificari repetate, inutile, dar nu am gasit o alta metoda
+mai eficienta de parcurgere a arborelui. Daca nu se gaseste litera pe un drum, se 
+revine in radacina si se alege un alt drum, chiar daca difera o singura celula.
+Restul functiilor au comentarii sugestive.
