@@ -1,0 +1,25 @@
+//~~~~~~~~~~~~~~~~~~~~~~~~~~//
+//	MIHAI SIMONA-GABRIELA   //
+//~~~~~~~~~~~~~~~~~~~~~~~~~~//
+
+*Generarea matricei zig-zag de ordin n*
+
+Matrice patratica cu n linii si n coloane, in care elementele sunt numere de la
+0 la n^2 - 1 plasate in zig-zag. Parcurgerea se face pe antidiagonale
+(dreapta sus -> stanga jos).
+
+/Implementare/
+Folosesc un 'for' care imi parcurge toate numerele pe care trebuie sa le pun in
+matrice, iar eu schimb liniile si coloanele in functie de caz. Daca suma indicilor
+liniei si coloanei sunt pari, se merge in sus pe diagonala respectiva, linia scade,
+coloana creste, intre limitele 1 si n. Daca suma este impara, se merge in jos pe
+diagonala, linia creste, coloana scade. Cazul particular este in coltul din dreapta
+sus. Exista 2 cazuri, pentru numar par de coloane si pentru numar impar de coloane.
+**Par - diagonala secundara coboara, este pe cazul lin+col impar. Cand termina de
+completat diagonala, urca pana sub colt, dar fiind pe cazul lin+col par, linia scade.
+Deci se pozitioneaza in colt, valoare deja completata. Coloana nu poate sa creasca,
+deci intra pe else, apoi pe ramura cu n par(else) si face lin += 2 pentru a ajunge
+la o valoare necompletata si a continua umplerea matricei pe ramura cu lin+col impar.
+**Impar - diagonala secundara urca, ajunge in colt, este necesar doar lin++ pentru 
+a trece la ramura cu impare si a continua.
+Am adaugat explicatiile detaliate si in cod, pentru a fi usor de urmarit.
